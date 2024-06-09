@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('font/PyeongChangPeace-Light.woff2') format('woff2');
+    /* 다른 형식의 폰트 파일도 포함할 수 있습니다. */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PyeongChangPeace-Light', Arial, sans-serif;
+    background-color: #1f1f1f; /* 기본 배경색 */
+    color: white; /* 기본 텍스트 색상 */
+    transition: background-color 0.5s; /* 배경색 변경 애니메이션 */
+}
+
+.container {
+    text-align: center;
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 6vw;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+
+.container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    background-color: white; /* 배경색을 어두운색으로 변경 */
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+}
+
+.logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+.team-name {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 텍스트 그림자 추가 */
+    pointer-events: none; /* 텍스트 선택 방지 */
+}
+
+.logo .achievement {
+    font-style: Arial;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    text-align: left;
+    z-index: 1;
+    width: calc(100% - 20px);
+    max-height: 80%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.logo:hover .achievement {
+    display: block;
+    top: 50%;
+    opacity: 1;
+}
+
+h1, h2 {
+    color: #fff; /* 헤딩 텍스트 색상을 흰색으로 변경 */
+}
+
+.main {
+    margin: 20px;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    opacity: 0.8;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.3; }
+}
+
+.guestbook {
+    margin: 50px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.guestbook h2 {
+    color: #fff;
+}
+
+#guestbook-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#guestbook-form input, #guestbook-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#guestbook-entries {
+    margin-top: 20px;
+}
+
+.guestbook-entry {
+    background-color: #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.guestbook-entry button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
